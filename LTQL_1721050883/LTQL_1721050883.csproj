@@ -46,10 +46,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
@@ -129,9 +129,16 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HTHASanPham883Controller.cs" />
+    <Compile Include="Controllers\NhaCungCap883Controller.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202112210659047_createtable.cs" />
+    <Compile Include="Migrations\202112210659047_createtable.Designer.cs">
+      <DependentUpon>202112210659047_createtable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\LTQLDb.cs" />
     <Compile Include="Models\NhaCungCap883.cs" />
     <Compile Include="Models\HTHASanPham883.cs" />
@@ -173,6 +180,16 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\NhaCungCap883\Create.cshtml" />
+    <Content Include="Views\NhaCungCap883\Delete.cshtml" />
+    <Content Include="Views\NhaCungCap883\Details.cshtml" />
+    <Content Include="Views\NhaCungCap883\Edit.cshtml" />
+    <Content Include="Views\NhaCungCap883\Index.cshtml" />
+    <Content Include="Views\HTHASanPham883\Create.cshtml" />
+    <Content Include="Views\HTHASanPham883\Delete.cshtml" />
+    <Content Include="Views\HTHASanPham883\Details.cshtml" />
+    <Content Include="Views\HTHASanPham883\Edit.cshtml" />
+    <Content Include="Views\HTHASanPham883\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -189,6 +206,11 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202112210659047_createtable.resx">
+      <DependentUpon>202112210659047_createtable.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

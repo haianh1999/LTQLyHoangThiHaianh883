@@ -20,5 +20,7 @@ namespace LTQL_1721050883.Models
 
         [Display(Name = "Mã Nhà Cung Cấp")]
         public int MaNhaCungCap { get; set; }
+        [ForeignKey("MaNhaCungCap")]
+        public virtual NhaCungCap883 NhaCungCap883s { get; set; }
     }
 }
